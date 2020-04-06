@@ -2,21 +2,21 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "parsec-dso.h"
+#include "../sdk/parsec-dso.h"
 
 #if defined(_WIN32)
 	#if !defined(BITS)
 		#define BITS 64
 	#endif
 	#if (BITS == 64)
-		#define SDK_PATH "../../sdk/windows/parsec.dll"
+		#define SDK_PATH "../sdk/windows/parsec.dll"
 	#else
-		#define SDK_PATH "../../sdk/windows/parsec32.dll"
+		#define SDK_PATH "../sdk/windows/parsec32.dll"
 	#endif
 #elif defined(__APPLE__)
-	#define SDK_PATH "../../sdk/macos/libparsec.dylib"
+	#define SDK_PATH "../sdk/macos/libparsec.dylib"
 #else
-	#define SDK_PATH "../../sdk/linux/libparsec.so"
+	#define SDK_PATH "../sdk/linux/libparsec.so"
 #endif
 
 static void logCallback(enum ParsecLogLevel level, char *msg, void *opaque)
