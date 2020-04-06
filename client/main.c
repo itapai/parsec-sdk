@@ -18,17 +18,17 @@
 		#define BITS 64
 	#endif
 	#if (BITS == 64)
-		#define SDK_PATH "lib/windows/parsec.dll"
+		#define SDK_PATH "../sdk/windows/parsec.dll"
 	#else
-		#define SDK_PATH "lib/windows/parsec32.dll"
+		#define SDK_PATH "../sdk/windows/parsec32.dll"
 	#endif
 #elif defined(__APPLE__)
 	#define GL_SILENCE_DEPRECATION
 	#include <OpenGL/gl.h>
-	#define SDK_PATH "lib/macos/libparsec.dylib"
+	#define SDK_PATH "../sdk/macos/libparsec.dylib"
 #else
 	#include <GL/gl.h>
-	#define SDK_PATH "lib/linux/libparsec.so"
+	#define SDK_PATH "../sdk/linux/libparsec.so"
 #endif
 
 struct context {

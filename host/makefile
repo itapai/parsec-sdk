@@ -13,7 +13,7 @@ CFLAGS = \
 	/O2 \
 	/MT \
 	/MP \
-	-I../../sdk \
+	-I../sdk \
 	-DBITS=$(BITS) \
 	-DWIN32_LEAN_AND_MEAN \
 	-DUNICODE
