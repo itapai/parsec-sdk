@@ -2,16 +2,17 @@
 *.iml
 *.pyc
 .vs/
+.vscode/
 *.pdb
 *.ilk
 *.o
 
 .DS_Store
 
-examples/host/host.exe
-examples/host/host
-examples/client/client.exe
-examples/client/client
+host/host.exe
+host/host
+client/client.exe
+client/client
 
 examples/android/build
 examples/android/captures
