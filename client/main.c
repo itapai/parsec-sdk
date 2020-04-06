@@ -18,7 +18,7 @@
 		#define BITS 64
 	#endif
 	#if (BITS == 64)
-		#define SDK_PATH "lib/windows/windowsparsec.dll"
+		#define SDK_PATH "lib/windows/parsec.dll"
 	#else
 		#define SDK_PATH "lib/windows/parsec32.dll"
 	#endif
@@ -122,7 +122,7 @@ static int32_t renderThread(void *opaque)
 
 		glViewport(0, 0, w, h);
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(0x00004000);
 
 		ParsecClientGLRenderFrame(context->parsec, NULL, NULL, 100);
 		SDL_GL_SwapWindow(context->window);
